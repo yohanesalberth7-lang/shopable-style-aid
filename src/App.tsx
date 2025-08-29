@@ -9,6 +9,7 @@ import BagPage from "./pages/BagPage";
 import LoyaltyPage from "./pages/LoyaltyPage";
 import LooksPage from "./pages/LooksPage";
 import ProductCatalogPage from "./pages/ProductCatalogPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFound from "./pages/NotFound";
 import { BottomNav } from "./components/BottomNav";
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/bag" element={<BagPage />} />
             <Route path="/loyalty" element={<LoyaltyPage />} />
             <Route path="/catalog" element={<ProductCatalogPage />} />
+            <Route path="/product/:productId" element={<ProductDetailPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNav />
