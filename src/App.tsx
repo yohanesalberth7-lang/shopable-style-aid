@@ -3,12 +3,14 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Stylist from "./pages/Stylist";
-import Looks from "./pages/Looks";
-import Bag from "./pages/Bag";
-import Loyalty from "./pages/Loyalty";
+import HomePage from "./pages/HomePage";
+import StylistPage from "./pages/StylistPage";
+import BagPage from "./pages/BagPage";
+import LoyaltyPage from "./pages/LoyaltyPage";
+import LooksPage from "./pages/LooksPage";
+import ProductCatalogPage from "./pages/ProductCatalogPage";
 import NotFound from "./pages/NotFound";
+import { BottomNav } from "./components/BottomNav";
 
 const queryClient = new QueryClient();
 
@@ -18,15 +20,18 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/stylist" element={<Stylist />} />
-          <Route path="/looks" element={<Looks />} />
-          <Route path="/bag" element={<Bag />} />
-          <Route path="/loyalty" element={<Loyalty />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="relative">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/stylist" element={<StylistPage />} />
+            <Route path="/looks" element={<LooksPage />} />
+            <Route path="/bag" element={<BagPage />} />
+            <Route path="/loyalty" element={<LoyaltyPage />} />
+            <Route path="/catalog" element={<ProductCatalogPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <BottomNav />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -1,66 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ShopAble Fashion Design System - Minimalism with Elegant Sophistication */
+/* ShopAble Fashion Design System - Glassmorphism iOS Mobile Fashion App */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 225 15% 15%;
-    
-    /* Sophisticated Palette */
-    --primary: 225 15% 15%;
-    --primary-foreground: 0 0% 98%;
-    --primary-light: 225 15% 25%;
-    
-    /* Elegant Accent */
-    --accent: 280 15% 45%;
-    --accent-light: 280 15% 95%;
-    --accent-foreground: 0 0% 98%;
-    
-    /* Refined Neutrals */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 225 15% 15%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 225 10% 55%;
-    
-    /* Surface Colors */
-    --card: 0 0% 100%;
-    --card-foreground: 225 15% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 225 15% 15%;
-    
-    /* Interactive States */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 280 15% 45%;
-    
-    /* Status Colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    /* Core Brand Colors - iOS Clean */
+    --background: 220 20% 98%;
+    --foreground: 220 15% 15%;
+
+    /* Card System - Glassmorphism */
+    --card: 0 0% 100% / 0.7;
+    --card-foreground: 220 15% 15%;
+    --card-shadow: 220 20% 80%;
+
+    /* App Background - iOS Gradient */
+    --app-background: 220 20% 98%;
+    --section-background: 0 0% 100% / 0.6;
+
+    /* Brand Primary - iOS Blue */
+    --primary: 212 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 212 50% 85%;
+
+    /* iOS Accent Colors */
+    --accent-gold: 45 100% 60%;
+    --accent-gold-muted: 45 30% 95%;
+    --accent-warm: 25 80% 65%;
+
+    /* Secondary iOS Tones */
+    --secondary: 220 15% 95% / 0.8;
+    --secondary-foreground: 220 15% 25%;
+    --secondary-muted: 220 10% 90% / 0.6;
+
+    /* Text Hierarchy - iOS Typography */
+    --text-primary: 220 15% 15%;
+    --text-secondary: 220 10% 45%;
+    --text-muted: 220 8% 65%;
+
+    /* Interactive Elements - iOS Style */
+    --button-primary: 212 100% 50%;
+    --button-primary-hover: 212 100% 45%;
+    --button-secondary: 220 15% 95% / 0.8;
+    --button-outline: 220 20% 85% / 0.6;
+
+    /* iOS Chip/Pill Colors */
+    --chip-background: 220 15% 95% / 0.8;
+    --chip-foreground: 220 15% 25%;
+    --chip-active: 212 100% 50%;
+    --chip-active-foreground: 0 0% 100%;
+
+    /* Status & Alerts - iOS System Colors */
     --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
-    
-    /* Elegant Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(280 20% 55%));
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 99%));
-    
-    /* Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(225 15% 15% / 0.08);
-    --shadow-medium: 0 4px 16px -4px hsl(225 15% 15% / 0.12);
-    --shadow-large: 0 8px 32px -8px hsl(225 15% 15% / 0.16);
-    
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-quick: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    --radius: 0.75rem;
+    --warning: 48 89% 50%;
+    --error: 355 78% 60%;
+    --info: 212 100% 50%;
+
+    /* Fashion Specific - iOS Clean */
+    --price-color: 220 15% 15%;
+    --discount-color: 355 78% 60%;
+    --tag-background: 220 10% 92% / 0.8;
+    --loyalty-gold: 45 100% 60%;
+
+    /* Glassmorphism Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(212 100% 50% / 0.9), hsl(220 100% 60% / 0.8));
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60% / 0.9), hsl(25 80% 65% / 0.8));
+    --gradient-warm: linear-gradient(135deg, hsl(25 80% 65% / 0.9), hsl(15 75% 60% / 0.8));
+    --gradient-app: linear-gradient(135deg, hsl(220 20% 98%), hsl(212 30% 95%));
+
+    /* Glassmorphism Shadows */
+    --shadow-card: 0 8px 32px hsl(220 20% 20% / 0.08);
+    --shadow-chip: 0 4px 16px hsl(220 20% 20% / 0.06);
+    --shadow-floating: 0 16px 64px hsl(220 20% 20% / 0.12);
+
+    /* Border & Input - iOS Clean */
+    --border: 220 20% 85% / 0.3;
+    --input: 220 15% 95% / 0.8;
+    --ring: 212 100% 50%;
+
+    --radius: 1rem;
+
+    /* Sidebar - iOS Glassmorphism */
+    --sidebar-background: 0 0% 100% / 0.8;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 212 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 95% / 0.6;
+    --sidebar-accent-foreground: 220 15% 25%;
+    --sidebar-border: 220 20% 85% / 0.3;
+    --sidebar-ring: 212 100% 50%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -70,53 +137,87 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-app-background text-text-primary;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
 }
 
 @layer components {
-  /* Elegant Card Variants */
-  .card-elegant {
-    @apply bg-card border border-border rounded-xl shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)];
-    background: var(--gradient-card);
+  /* Glassmorphism iOS App Components */
+  .fashion-card {
+    @apply bg-card rounded-2xl shadow-card border border-border backdrop-blur-xl;
+  }
+
+  .fashion-chip {
+    @apply bg-chip-background text-chip-foreground px-4 py-2 rounded-full text-sm font-medium 
+           shadow-chip transition-all duration-200 hover:shadow-md backdrop-blur-sm;
+  }
+
+  .fashion-chip-active {
+    @apply bg-chip-active text-chip-active-foreground backdrop-blur-sm;
+  }
+
+  .fashion-button-primary {
+    @apply bg-button-primary text-primary-foreground px-6 py-3 rounded-2xl font-semibold
+           transition-all duration-200 hover:bg-button-primary-hover active:scale-95 backdrop-blur-sm;
+  }
+
+  .fashion-button-secondary {
+    @apply bg-button-secondary text-secondary-foreground px-6 py-3 rounded-2xl font-medium
+           border border-button-outline transition-all duration-200 hover:shadow-md backdrop-blur-xl;
+  }
+
+  .fashion-price {
+    @apply text-price-color font-bold text-lg;
+  }
+
+  .fashion-text-muted {
+    @apply text-text-muted text-sm;
+  }
+
+  .fashion-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .fashion-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .mobile-container {
+    @apply max-w-sm mx-auto min-h-screen bg-app-background;
+  }
+
+  .mobile-page {
+    @apply px-4 pb-20;
+  }
+
+  .bottom-nav {
+    @apply fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm
+           bg-card border-t border-border px-4 py-2 z-50 backdrop-blur-xl;
+  }
+
+  .product-card {
+    @apply fashion-card p-4 space-y-3 min-w-[160px];
+  }
+
+  .alert-card {
+    @apply fashion-card p-4 flex items-center space-x-3;
+  }
+
+  /* iOS Glassmorphism Specific Classes */
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg;
   }
   
-  .card-product {
-    @apply card-elegant hover:shadow-[var(--shadow-medium)] hover:-translate-y-1;
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-2xl border-t border-white/20;
   }
   
-  /* Gradient Backgrounds */
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
+  .glass-button {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl hover:bg-white/30 transition-all duration-200;
   }
   
-  .bg-gradient-accent {
-    background: var(--gradient-accent);
-  }
-  
-  .bg-gradient-surface {
-    background: var(--gradient-surface);
-  }
-  
-  /* Typography Hierarchy */
-  .text-brand-large {
-    @apply text-2xl font-semibold tracking-tight;
-  }
-  
-  .text-brand-medium {
-    @apply text-lg font-medium tracking-tight;
-  }
-  
-  .text-elegant {
-    @apply text-foreground/90 leading-relaxed;
-  }
-  
-  /* Smooth Transitions */
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-  
-  .transition-quick {
-    transition: var(--transition-quick);
+  .glass-input {
+    @apply bg-white/60 backdrop-blur-sm border border-white/30 rounded-xl placeholder:text-gray-500;
   }
 }
