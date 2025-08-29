@@ -11,6 +11,7 @@ import LooksPage from "./pages/LooksPage";
 import ProductCatalogPage from "./pages/ProductCatalogPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import WatchlistPage from "./pages/WatchlistPage";
+import WishlistPage from "./pages/WishlistPage";
 import NotFound from "./pages/NotFound";
 import { BottomNav } from "./components/BottomNav";
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/catalog" element={<ProductCatalogPage />} />
             <Route path="/product/:productId" element={<ProductDetailPage />} />
             <Route path="/watchlist" element={<WatchlistPage />} />
+            <Route path="/wishlist" element={<WishlistPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNav />
