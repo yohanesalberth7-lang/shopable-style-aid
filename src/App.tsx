@@ -10,6 +10,7 @@ import LoyaltyPage from "./pages/LoyaltyPage";
 import LooksPage from "./pages/LooksPage";
 import ProductCatalogPage from "./pages/ProductCatalogPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import WatchlistPage from "./pages/WatchlistPage";
 import NotFound from "./pages/NotFound";
 import { BottomNav } from "./components/BottomNav";
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/loyalty" element={<LoyaltyPage />} />
             <Route path="/catalog" element={<ProductCatalogPage />} />
             <Route path="/product/:productId" element={<ProductDetailPage />} />
+            <Route path="/watchlist" element={<WatchlistPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNav />
